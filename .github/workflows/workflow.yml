@@ -1,5 +1,8 @@
 name: Heroku Deployment
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   heroku-deploy:
