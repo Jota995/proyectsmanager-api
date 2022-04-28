@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use(`/api/${API_VERSION}/proyects`, proyectRoutes)
 app.use(`/api/${API_VERSION}/tasks`, tasksRoutes)
-app.use("/ping", (req, res) => res.send("pong"))
+app.get("/ping", (req, res) => res.send("pong"))
 
 app.use(errorHandler)
 
