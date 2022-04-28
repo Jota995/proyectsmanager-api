@@ -8,9 +8,9 @@ on:
 
 jobs:
   build:
+    if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-latest
     steps:
-      if: ${{ github.event.pull_request.merged }}
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
